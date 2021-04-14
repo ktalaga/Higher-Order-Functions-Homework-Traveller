@@ -25,7 +25,7 @@ Traveller.prototype.getJourneysByTransport = function (transport) {
 
 Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
   const journeysByDistance = this.journeys.filter((journey) => {
-    return journey.distance === minDistance;
+    return journey.distance >= minDistance;
   })
   return journeysByDistance;
 };
